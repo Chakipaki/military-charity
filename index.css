@@ -1086,7 +1086,7 @@ body {
 }
 .our-cases {
   width: 100%;
-  background: #FBB900;
+  background: #0E4194;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1137,7 +1137,7 @@ body {
   z-index: 1;
 }
 .our-cases .section__title {
-  color: #0E4194;
+  color: #FFF;
   margin-bottom: 66px;
 }
 .our-cases__item {
@@ -1281,6 +1281,7 @@ body {
 .help-section {
   height: 400px;
   width: 100%;
+  background: url("./assets/help/help-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
