@@ -1,0 +1,175 @@
+@import "../general/variables";
+
+.fund-facts {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 72px 25px 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top: 120px;
+  overflow: visible;
+
+  .section__title {
+    color: $blue;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: $bigger-small-fz;
+    color: $blue;
+    margin-bottom: 55px;
+    text-align: center;
+  }
+
+  .fund-facts__list {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    article {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-size: $large-fz;
+        font-weight: $medium-fw;
+        color: $blue;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      p {
+        font-size: $bigger-small-fz;
+        color: $blue;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+
+  .fund-facts{
+    padding: 50px 20px 40px;
+    scroll-margin-top: 80px;
+
+    &__text {
+      margin-bottom: 35px;
+    }
+
+    .fund-facts__list {
+
+      article {
+
+        h2 {
+          font-size: $extra-big-fz;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .fund-facts{
+    padding: 40px 20px 30px;
+
+    .section__title {
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+    }
+
+    .fund-facts__list {
+
+      article {
+
+        h2 {
+          font-size: $big-fz;
+          font-weight: $medium-fw;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: $bigger-small-fz;
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 590px) {
+
+  .fund-facts{
+    padding: 25px 10px;
+    scroll-margin-top: 60px;
+
+    &__text {
+      font-size: $small-fz;
+      margin-bottom: 20px;
+    }
+
+    .fund-facts__list {
+
+      article {
+        margin-bottom: 15px;
+
+        h2 {
+          font-size: $medium-fz;
+        }
+
+        p {
+          font-size: $small-fz;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+
+  .fund-facts{
+    scroll-margin-top: 80px;
+
+    &__title {
+      font-size: $big-fz;
+    }
+
+
+  }
+}
+
+@media (max-width: 360px) {
+
+  .fund-facts{
+
+    &__text {
+      font-size: $extra-small-fz;
+      margin-bottom: 10px;
+    }
+
+    .fund-facts__list {
+
+      article {
+        margin-bottom: 15px;
+
+        h2 {
+          font-size: $bigger-small-fz;
+        }
+
+        p {
+          font-size: $extra-small-fz;
+        }
+      }
+    }
+  }
+}

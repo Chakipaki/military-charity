@@ -1,0 +1,155 @@
+@import "../general/variables";
+
+.our-works {
+  width: 100%;
+  height: fit-content;
+  padding: 76px 0;
+  background: $yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top: 120px;
+  overflow: visible;
+
+  &-container {
+    width: 100%;
+    max-width: 1220px;
+    padding: 0 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .section__title {
+    margin-bottom: 75px;
+    color: $blue;
+  }
+
+  &__item {
+    width: 31%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+
+    img {
+      height: 70px;
+      width: auto;
+      margin-bottom: 15px;
+    }
+
+    .item__info {
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-size: $bigger-small-fz;
+        color: $blue;
+        font-weight: $bold-fw;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 960px) {
+
+  .our-works {
+    padding: 50px 0;
+    scroll-margin-top: 80px;
+
+    .our-works-container {
+      padding: 0 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .our-works {
+    padding: 40px 0;
+
+    .our-works-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section__title {
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      max-width: 500px;
+      width: 100%;
+      padding: 0 15px;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        width: 110px;
+        height: auto;
+        margin: 0 30px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .our-works {
+    scroll-margin-top: 60px;
+
+    .section__title {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+
+  .our-works {
+    scroll-margin-top: 80px;
+    padding: 20px 0 30px;
+
+    .section__title{
+      margin-bottom: 25px;
+    }
+
+    &-container {
+      padding: 0 10px;
+    }
+
+    &__item {
+      max-width: 500px;
+      width: 100%;
+      padding: 15px 0;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        margin-right: 30px;
+        width: 110px;
+        height: auto;
+      }
+    }
+
+    &__item {
+      width: 100%;
+      flex-direction: row;
+
+      img {
+        margin-right: 10px;
+        width: 70px;
+      }
+
+      .item__info {
+        h2 {
+          font-size: $small-fz;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../general/variables";
+
+.info {
+  height: 600px;
+  width: 100%;
+  overflow: visible;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 590px) {
+  .info {
+    height: 350px;
+    width: 100%;
+  }
+}

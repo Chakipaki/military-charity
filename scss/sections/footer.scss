@@ -1,0 +1,265 @@
+@import "../general/variables";
+
+.footer {
+  height: fit-content;
+  background: $yellow;
+  width: 100%;
+  padding: 59px 0 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: $small-fz;
+    color: $blue;
+    text-align: center;
+  }
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-right {
+      align-items: flex-end;
+    }
+    overflow: visible;
+  }
+
+  &__title {
+    font-size: $extra-big-fz;
+    font-weight: $bold-fw;
+    color: $blue;
+    margin-bottom: 10px;
+    overflow: visible;
+  }
+
+  &__info-org {
+    font-size: $medium-fz;
+    color: $blue;
+    margin-bottom: 40px;
+    overflow: visible;
+  }
+
+  &__soc-links {
+    display: flex;
+    align-items: center;
+    overflow: visible;
+
+    img {
+      width: 165px;
+      height: 165px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 112px;
+      align-items: center;
+      overflow: visible;
+      margin-left: 20px;
+
+      a {
+        img {
+          width: 47px;
+          height: 47px;
+        }
+      }
+    }
+  }
+
+  &__email {
+    font-size: $big-fz;
+    font-weight: $bold-fw;
+    color: $blue;
+    margin-bottom: 30px;
+
+    &-link {
+      font-size: $medium-fz;
+      color: $blue;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__call-center {
+    font-size: $big-fz;
+    font-weight: $bold-fw;
+    color: $blue;
+    margin-bottom: 20px;
+
+    &-tel {
+      font-size: $medium-fz;
+      color: $blue;
+
+      &-mb {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 960px) {
+
+  .footer {
+    padding: 45px 0 60px;
+
+    &__title {
+      font-size: $big-fz;
+    }
+
+    &__info-org {
+      font-size: $bigger-small-fz;
+      margin-bottom: 25px;
+    }
+
+    &__soc-links {
+
+      img {
+        width: 130px;
+        height: 130px;
+      }
+
+      div {
+        margin-left: 15px;
+        height: 110px;
+      }
+    }
+
+    &__email {
+      font-size: $medium-fz;
+      margin-bottom: 20px;
+
+      &-link {
+        font-size: $bigger-small-fz;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__call-center {
+      font-size: $medium-fz;
+      margin-bottom: 20px;
+
+      &-tel {
+        font-size: $bigger-small-fz;
+
+        &-mb {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 35px 0 50px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__side {
+      padding: 0 35px;
+
+      &-right {
+        align-items: flex-start;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .footer {
+    padding: 20px 0 50px;
+
+    &__copyright {
+      font-size: $extra-small-fz;
+    }
+
+    &__side {
+      padding: 0;
+
+      &-right {
+        margin-top: 30px;
+      }
+    }
+
+    &__title {
+      font-size: $medium-fz;
+    }
+
+    &__info-org {
+      font-size: $small-fz;
+      margin-bottom: 15px;
+    }
+
+    &__soc-links {
+      flex-direction: column;
+      align-items: flex-start;
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
+
+      div {
+        margin-top: 10px;
+        height: fit-content;
+        flex-direction: row;
+        width: 120px;
+      }
+    }
+
+    &__email {
+      font-size: $medium-fz;
+      margin-bottom: 15px;
+
+      &-link {
+        font-size: $small-fz;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__call-center {
+      font-size: $medium-fz;
+      margin-bottom: 15px;
+
+      &-tel {
+        font-size: $small-fz;
+
+        &-mb {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .footer {
+
+    &__email {
+
+      &-link {
+        font-size: $extra-small-fz;
+      }
+    }
+  }
+}

@@ -1,0 +1,347 @@
+@import "../general/variables";
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background: $yellow;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  overflow-x: visible;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 25px;
+    position: relative;
+    overflow-x: visible;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__navigation {
+    overflow-x: visible;
+    position: relative;
+
+    .navigation__btn {
+
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        stroke: $blue;
+      }
+
+      p {
+        font-size: $bigger-small-fz;
+        font-weight: $bold-fw;
+        color: $blue;
+        margin: 0 9px;
+        text-transform: uppercase;
+      }
+    }
+
+    .navigation__list {
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background: $blue;
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      height: fit-content;
+      border-radius: 5px;
+      width: 150px;
+      transition: all .3s linear;
+      animation: show-menu .3s linear;
+
+      a {
+        padding: 10px;
+        color: $white;
+        font-size: $small-fz;
+        transition: all linear .3s;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 330px;
+
+    .language {
+      display: flex;
+      align-items: center;
+
+      &__button {
+        cursor: pointer;
+        padding: 5px;
+        transition: all linear .3s;
+        color: $blue;
+        font-size: $bigger-small-fz;
+        font-weight: $bold-fw;
+        position: relative;
+
+        &:first-of-type {
+          margin-right: 5px;
+        }
+
+        &:hover {
+          &:after {
+            bottom: 0;
+            position: absolute;
+            content: "";
+            width: 80%;
+            height: 2px;
+            background: $blue;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 1px;
+          }
+        }
+
+        &-active {
+          &:after {
+            bottom: 0;
+            position: absolute;
+            content: "";
+            width: 80%;
+            height: 2px;
+            background: $blue;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 1px;
+          }
+
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    button {
+      min-width: 150px;
+      padding: 0 10px;
+      width: fit-content;
+      height: 45px;
+      font-size: $bigger-small-fz;
+      font-weight: $bold-fw;
+      border-radius: 50px;
+      color: $white;
+      background: $blue;
+      text-transform: uppercase;
+      transition: all linear .3s;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: auto;
+    z-index: 100;
+  }
+}
+
+@media (max-width: 960px) {
+  .header {
+    height: 80px;
+
+    &__navigation {
+
+      .navigation__btn {
+
+        svg{
+          width: 25px;
+          height: 25px;
+        }
+
+        p{
+          font-size: $small-fz;
+          font-weight: $medium-fw;
+          margin: 0 5px;
+        }
+      }
+    }
+
+    .navigation__list {
+      top: 25px;
+      left: 0;
+
+      a {
+        font-size: $small-fz;
+      }
+    }
+
+    &__actions {
+      max-width: 220px;
+
+      .language {
+
+        &__button {
+          font-size: $small-fz;
+          font-weight: $medium-fw;
+        }
+      }
+
+      button {
+        min-width: 80px;
+        height: 35px;
+        font-size: $small-fz;
+        font-weight: $bold-fw;
+        border-radius: 30px;
+      }
+    }
+
+    &__logo{
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 160px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__actions {
+
+      .language {
+
+        &__button {
+          font-size: $extra-small-fz;
+          font-weight: $semi-fz;
+        }
+      }
+
+      button {
+        min-width: 80px;
+        height: 35px;
+        font-size: $small-fz;
+        font-weight: $semi-fz;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+@keyframes show-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 590px) {
+  .header {
+    height: 60px;
+
+    .container {
+      padding: 0 15px;
+    }
+
+    &__navigation {
+
+      .navigation__btn {
+
+        svg{
+          width: 20px;
+          height: 20px;
+        }
+
+        p{
+          font-size: $extra-small-fz;
+        }
+      }
+    }
+
+    .navigation__list {
+      a {
+        font-size: $extra-small-fz;
+      }
+    }
+
+    &__actions {
+      max-width: 180px;
+
+      .language {
+
+        &__button {
+          font-size: $extra-small-fz;
+        }
+      }
+
+      button {
+        height: 30px;
+        font-size: $extra-small-fz;
+        font-weight: $medium-fw;
+        border-radius: 30px;
+      }
+    }
+
+    &__logo{
+      top: -10px;
+      width: 120px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 80px;
+
+    &__actions {
+      flex-direction: column;
+      align-items: flex-end;
+      .language {
+
+        margin-bottom: 5px;
+
+        &__button {
+        }
+      }
+
+      button {
+        height: 35px;
+      }
+    }
+
+    &__logo{
+      top: -5px;
+    }
+
+    &__actions {
+
+
+      button {
+        min-width: 100px;
+        height: 30px;
+        font-size: $extra-small-fz;
+        font-weight: $medium-fw;
+        border-radius: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,514 @@
+@import "../general/variables";
+
+.donate {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: show-pop-up .2s linear;
+
+  &__inner {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 20px;
+    background: $white;
+    max-height: 90vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 50px 0 #00000040;
+    border-radius: 30px;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    overflow: visible;
+    width: 38px;
+    height: 38px;
+  }
+
+  &__top-img {
+    width: 100%;
+    height: 300px;
+    border-radius: 30px 30px 0 0;
+    overflow: visible;
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  &__currencies {
+    display: flex;
+    align-items: center;
+    margin: 50px 0 45px;
+    overflow: visible;
+
+    p {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: $blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      font-size: $big-fz;
+      margin: 0 10px;
+      overflow: visible;
+    }
+  }
+
+  &__title {
+    font-size: $extra-large-fz;
+    font-weight: $bold-fw;
+    color: $blue;
+    margin-bottom: 60px;
+    overflow: visible;
+    text-align: center;
+  }
+
+  &__pay-pal-link {
+    width: 100%;
+    max-width: 280px;
+    padding: 0 15px;
+    margin-bottom: 92px;
+    overflow: visible;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__expenses-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible;
+
+    div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      overflow: visible;
+
+      p {
+        width: 313px;
+        height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $blue;
+        color: $white;
+        border-radius: 50px;
+        margin-right: 20px;
+        font-size: $medium-fz;
+        overflow: visible;
+      }
+
+      span {
+        font-size: $medium-fz;
+        color: $blue;
+        overflow: visible;
+      }
+    }
+  }
+
+  &__expenses {
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 0 0 130px;
+    margin: 50px 0;
+
+    p {
+      font-size: $bigger-small-fz;
+      color: $blue;
+      margin-bottom: 15px;
+      display: block;
+      overflow: visible;
+
+      span {
+        color: $blue;
+        font-weight: $semi-fz;
+        overflow: visible;
+      }
+    }
+  }
+
+  &__cryptos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    overflow: visible;
+    padding: 0 0 0 248px;
+    margin-bottom: 70px;
+
+    button {
+      overflow: visible;
+      width: 320px;
+      height: 82px;
+      background: $blue;
+      font-size: $bigger-small-fz;
+      color: $white;
+      margin-bottom: 15px;
+      border-radius: 50px;
+    }
+  }
+
+  &__safes {
+    margin-bottom: 120px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    font-size: $bigger-small-fz;
+    color: $blue;
+
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+  }
+}
+
+@keyframes show-pop-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 960px) {
+
+  .donate {
+
+    &__cross {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      cursor: pointer;
+    }
+
+    &__currencies {
+      display: flex;
+      align-items: center;
+      margin: 40px 0 30px;
+
+      p {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: $blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        font-size: $medium-fz;
+        margin: 0 10px;
+      }
+    }
+
+    &__title {
+      font-size: $large-fz;
+      margin-bottom: 40px;
+    }
+
+    &__buttons {
+      margin-bottom: 35px;
+
+      button {
+        margin: 0 10px 0;
+        width: 250px;
+        height: 60px;
+        font-size: $small-fz;
+      }
+    }
+
+    &__card-number {
+      font-size: $medium-fz;
+      margin-bottom: 30px;
+    }
+
+    &__expenses-title {
+
+      div {
+
+        p {
+          width: 220px;
+          height: 52px;
+          border-radius: 30px;
+          margin-right: 15px;
+          font-size: $bigger-small-fz;
+        }
+
+        span {
+          font-size: $bigger-small-fz;
+        }
+      }
+    }
+
+    &__expenses {
+      padding: 0 0 0 70px;
+      margin: 30px 0;
+      overflow: visible;
+    }
+
+    &__cryptos {
+      padding: 0 0 0 100px;
+      margin-bottom: 40px;
+
+      button {
+        width: 220px;
+        height: 52px;
+        margin-bottom: 15px;
+        border-radius: 30px;
+      }
+    }
+
+    &__safes {
+      margin-bottom: 90px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .donate {
+    &__individual {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      flex-wrap: wrap;
+
+      img {
+        width: 50%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__top-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+
+      img {
+        height: 280px;
+      }
+    }
+
+    &__pay-pal-link {
+      width: 100%;
+      max-width: 220px;
+      margin-bottom: 52px;
+      overflow: visible;
+    }
+
+    &__expenses-title {
+      width: 100%;
+      align-items: center;
+
+      div {
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          width: 220px;
+          height: 52px;
+          border-radius: 30px;
+          margin: 0 0 15px;
+          font-size: $bigger-small-fz;
+        }
+
+        span {
+          font-size: $bigger-small-fz;
+        }
+      }
+    }
+
+    &__cryptos {
+      padding: 0 0 0 50px;
+      margin-bottom: 30px;
+    }
+
+    &__safes {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  .donate {
+
+    &__pay-pal-link {
+      margin-bottom: 25px;
+    }
+
+    &__cross {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 25px;
+      height: 25px;
+    }
+
+    &__currencies {
+      display: flex;
+      align-items: center;
+      margin: 20px 0 15px;
+
+      p {
+        width: 40px;
+        height: 40px;
+        font-size: $bigger-small-fz;
+      }
+    }
+
+    &__title {
+      font-size: $big-fz;
+      margin-bottom: 30px;
+    }
+
+    &__buttons {
+      margin-bottom: 35px;
+      width: 100%;
+      justify-content: center;
+
+      button {
+        margin: 0 5px 0;
+        width: 50%;
+        max-width: 190px;
+        height: 40px;
+        font-size: $extra-small-fz;
+      }
+    }
+
+    &__card-number {
+      margin-bottom: 30px;
+      padding: 0 5px;
+      font-size: $small-fz;
+
+      text-align: center;
+
+      br {
+        display: block;
+      }
+    }
+
+    &__expenses-title {
+
+      div {
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          width: 180px;
+          height: 42px;
+          border-radius: 30px;
+          margin: 0 0 10px;
+          font-size: $small-fz;
+        }
+
+        span {
+          font-size: $small-fz;
+        }
+      }
+    }
+
+    &__individual {
+      margin-bottom: 25px;
+      padding: 0 10px;
+
+      img {
+        width: 50%;
+        height: auto;
+      }
+    }
+
+    &__expenses {
+      padding: 0 15px;
+
+      p {
+        font-size: $small-fz;
+        margin-bottom: 10px;
+
+        span {
+          color: $blue;
+        }
+      }
+    }
+
+    &__cryptos {
+      padding: 0 10px;
+      margin-bottom: 20px;
+      align-items: center;
+      margin-top: 10px;
+
+      button {
+        width: 180px;
+        height: 42px;
+        font-size: $small-fz;
+      }
+    }
+
+    &__safes {
+      margin-bottom: 40px;
+      font-size: $small-fz;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .donate {
+
+    &__expenses-title {
+
+      div {
+
+        span {
+          font-size: $extra-small-fz;
+          margin: 0;
+        }
+      }
+    }
+
+    &__expenses {
+      margin: 0 15px;
+      padding: 0 15px;
+
+      p {
+        font-size: $extra-small-fz;
+      }
+    }
+  }
+}

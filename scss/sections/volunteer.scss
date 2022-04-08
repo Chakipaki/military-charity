@@ -1,0 +1,52 @@
+@import "../general/variables";
+
+.volunteer {
+  height: 510px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+
+  .section__title {
+    color: $white;
+    margin-bottom: 40px;
+  }
+
+  .section__button {
+    background: $yellow;
+    color: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 960px) {}
+
+@media (max-width: 590px) {
+
+  .volunteer {
+    padding: 0 15px;
+    height: 350px;
+
+    .section__title {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+
+  .volunteer {
+
+    .section__title {
+      margin-bottom: 15px;
+    }
+  }
+}
