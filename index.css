@@ -189,9 +189,7 @@ body {
   top: 35px;
   left: 0;
   background: #FFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -777,7 +775,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   padding: 76px 0;
-  background: #FBB900;
+  background: #0E4194;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -807,7 +805,7 @@ body {
 }
 .our-works .section__title {
   margin-bottom: 75px;
-  color: #0E4194;
+  color: #FFF;
 }
 .our-works__item {
   width: 31%;
@@ -846,7 +844,7 @@ body {
 }
 .our-works__item .item__info h2 {
   font-size: 1.667rem;
-  color: #0E4194;
+  color: #FFF;
   font-weight: 700;
   text-align: center;
 }
