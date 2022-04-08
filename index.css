@@ -1307,8 +1307,8 @@ body {
   margin-bottom: 53px;
 }
 .help-section .section__button {
-  background-color: #FBB900;
-  color: #0E4194;
+  background-color: #0E4194;
+  color: #FFF;
 }
 
 @media (max-width: 590px) {
